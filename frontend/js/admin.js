@@ -66,7 +66,7 @@ document.getElementById("gestionar-usuarios-btn").addEventListener(
           const rows = table.getElementsByTagName("tr");
           for (let i = 1; i < rows.length; i++) {
             const currentRow = rows[i];
-
+            const cellValue = currentRow.cells[0].innerText;
             if (cellValue == boleta_usuario) {
               currentRow.remove();
             }
@@ -99,30 +99,25 @@ document.getElementById("gestionar-asesoria-btn").addEventListener(
         const table = document.getElementById("subject-table");
         table.innerHTML = `
                     <tr>
+                        <th>ID</th>
                         <th>Nombre</th>
-                        <th>Tema</th>
-                        <th>Descripción</th>
-                        <th>Cupo Disponible</th>
-                        <th>Aula</th>
                         <th>Acciones</th>
                     </tr>`;
+
         data.forEach((subject) => {
           const row = table.insertRow();
-          row.insertCell(0).innerText = subject.nombre_asesoria;
-          row.insertCell(1).innerText = subject.tema_asesoria;
-          row.insertCell(2).innerText = subject.descripcion_asesoria;
-          row.insertCell(3).innerText = subject.cupo_disponible;
-          row.insertCell(4).innerText = subject.aula_asesoria;
-          const actionsCell = row.insertCell(5);
+          row.insertCell(0).innerText = subject.id_unidadAprendizaje;
+          row.insertCell(1).innerText = subject.unidad_aprendizaje;
+          const actionsCell = row.insertCell(2);
           const deleteBtn = document.createElement("button");
           deleteBtn.innerText = "Eliminar";
           deleteBtn.addEventListener("click", function () {
             if (
               confirm(
-                `¿Estás seguro de que quieres eliminar la materia ${subject.nombre_asesoria}?`,
+                `¿Estás seguro de que quieres eliminar la materia ${subject.unidad_aprendizaje}?`,
               )
             ) {
-              fetch(BASE_URL + "/materia/" + subject.id_asesoria, {
+              fetch(BASE_URL + "/materia/" + subject.id_unidadAprendizaje, {
                 method: "DELETE",
               })
                 .then((response) => {
@@ -143,7 +138,6 @@ document.getElementById("gestionar-asesoria-btn").addEventListener(
         });
       })
       .catch((error) => {
-        console.error("Error:", error);
         alert("Error al cargar materias");
       });
   },
