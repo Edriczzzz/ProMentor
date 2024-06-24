@@ -42,7 +42,7 @@ export const createNewUser = async (req, res) => {
       .input("id_unidadAcademica", sql.Int, unidadAcademica)
       .input("id_grupo", sql.Int, grupo)
       .query(
-        "INSERT INTO Usuario (boleta_usuario, password_usuario, nombre_usuario, apellido_usuario, correo_usuario, id_unidadAcademica, id_grupo) VALUES (@boleta_usuario, @password_usuario, @nombre_usuario, @apellido_usuario, @correo_usuario, @id_unidadAcademica, @id_grupo)"
+        "INSERT INTO Usuario (boleta_usuario, password_usuario, nombre_usuario, apellido_usuario, correo_usuario, id_unidadAcademica, id_grupo) VALUES (@boleta_usuario, @password_usuario, @nombre_usuario, @apellido_usuario, @correo_usuario, @id_unidadAcademica, @id_grupo)",
       );
 
     res.json({
@@ -62,22 +62,22 @@ export const createNewUser = async (req, res) => {
 
 export const deleteUser = async (req, res) => {
   const { id } = req.params;
+  console.log(id, typeof id)
 
   if (!id) {
-    return res.status(400).json({ msg: "Bad Request. Please provide a user ID" });
+    return res.status(400).json({
+      msg: "Bad request. Please provide a user ID",
+    });
   }
 
   try {
     const pool = await getConnection();
+    await pool.request().input("id", sql.VarChar, id).query(
+      "DELETE usuario WHERE boleta_usuario = @id",
+    );
 
-    await pool
-      .request()
-      .input("id", sql.Int, id)
-      .query("DELETE FROM users WHERE id = @id");
-
-    res.json({ msg: "User deleted successfully" });
+    res.json({ msg: `User with ID = ${id} deleted successfully` });
   } catch (error) {
-    res.status(500);
-    res.send(error.message);
+    return res.send(error.message);
   }
 };

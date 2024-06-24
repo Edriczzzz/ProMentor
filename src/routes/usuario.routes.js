@@ -11,7 +11,7 @@ router.get("/users", getUsuarios);
 
 router.post("/crearusuario", createNewUser);
 
-router.post("/delete", deleteUser)
+router.delete("/delete/:id", deleteUser)
 
 
 export default router;
