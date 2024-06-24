@@ -73,8 +73,14 @@ export const deleteUser = async (req, res) => {
   try {
     const pool = await getConnection();
     await pool.request().input("id", sql.VarChar, id).query(
+      "DELETE ListaAlumno WHERE boleta_usuario = @id",
+    );
+    await pool.request().input("id", sql.VarChar, id).query(
       "DELETE usuario WHERE boleta_usuario = @id",
     );
+  
+
+    
 
     res.json({ msg: `User with ID = ${id} deleted successfully` });
   } catch (error) {

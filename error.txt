@@ -1,0 +1,2 @@
+The DELETE statement conflicted with the REFERENCE constraint "FK_Usuario_Calificaciones". The conflict occurred in
+database "Promentor", table "dbo.Calificaciones", column 'boleta_usuario'
