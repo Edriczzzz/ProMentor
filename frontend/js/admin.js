@@ -112,27 +112,22 @@ document.getElementById("gestionar-asesoria-btn").addEventListener(
           const deleteBtn = document.createElement("button");
           deleteBtn.innerText = "Eliminar";
           deleteBtn.addEventListener("click", function () {
-            if (
-              confirm(
-                `¿Estás seguro de que quieres eliminar la materia ${subject.unidad_aprendizaje}?`,
-              )
-            ) {
-              fetch(BASE_URL + "/materia/" + subject.id_unidadAprendizaje, {
-                method: "DELETE",
-              })
-                .then((response) => {
-                  if (response.ok) {
-                    alert("Materia eliminada exitosamente");
-                    row.remove();
-                  } else {
-                    alert("Error al eliminar la materia");
-                  }
-                })
-                .catch((error) => {
-                  console.error("Error:", error);
+            fetch(BASE_URL + "/materia/" + subject.id_unidadAprendizaje, {
+              method: "DELETE",
+            })
+              .then((response) => {
+                console.log(response);
+                if (response.ok) {
+                  alert("Materia eliminada exitosamente");
+                  row.remove();
+                } else {
                   alert("Error al eliminar la materia");
-                });
-            }
+                }
+              })
+              .catch((error) => {
+                console.error("Error:", error);
+                alert("Error al eliminar la materia");
+              });
           });
           actionsCell.appendChild(deleteBtn);
         });
