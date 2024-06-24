@@ -1,183 +1,179 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ProMentor Admin</title>
-  <link rel="stylesheet" href="/frontend/css/stylesadmin.css">
-</head>
-<body>
-  <header>
-    <div class="header-left">
-      <img src="/frontend/img/persona.PNG" alt="Admin Profile Picture" class="profile-img">
-      <div class="admin-info">
-        <p>Camargo Flores Víctor Alonso</p>
-        <p>Admin</p>
-      </div>
-    </div>
-    <div class="header-center">
-      <img src="/frontend/img/logo.png" alt="ProMentor Logo" class="logo">
-    </div>
-    <div class="header-right">
-      <button class="icon-button-menu">
-        <img src="/frontend/img/menu.png" alt="Menu">
-      </button>
-    </div>
-  </header>
-  <main>
-    <section class="welcome-section">
-      <div style="text-align: center">
-        <h1>Bienvenido a ProMentor</h1>
-      </div>
-      <div style="text-align: center">
-        <img src="/frontend/img/logo.png" alt="Logo" class="logo-enmedio">
-      </div>
-    </section>
-    <div style="text-align: center">
-      <section class="logo-con-botones">
-        <p>Selecciona la opción a realizar</p>
-      </section>
-    </div>
-    <div class="buttons">
-      <button id="gestionar-usuarios-btn">Gestionar Usuarios</button>
-      <button id="gestionar-asesoria-btn">Gestionar Asesorías</button>
-    </div>
-    <section id="gestionar-usuarios" class="hidden">
-      <h2>Alumnos inscritos</h2>
-      <div class="user-list">
-        <table id="user-table">
-          <tr>
-            <th>Boleta</th>
-            <th>Nombre</th>
-            <th>Apellido</th>
-            <th>Correo</th>
-            <th>Unidad Académica</th>
-            <th>Grupo</th>
-            <th>Acciones</th>
-          </tr>
-          <!-- Ejemplo de usuario -->
-          <tr id="user-row-1">
-            <td>202101</td>
-            <td>Juan</td>
-            <td>Pérez</td>
-            <td>juan@example.com</td>
-            <td>Ingeniería</td>
-            <td>101</td>
-            <td>
-              <button class="delete-user-button" data-user-id="1">Eliminar</button>
-            </td>
-          </tr>
-          <tr id="user-row-2">
-            <td>202102</td>
-            <td>María</td>
-            <td>García</td>
-            <td>maria@example.com</td>
-            <td>Arquitectura</td>
-            <td>102</td>
-            <td>
-              <button class="delete-user-button" data-user-id="2">Eliminar</button>
-            </td>
-          </tr>
-        </table>
-      </div>
-      <button class="action-btn" id="add-user-btn">Añadir Usuario</button>
-      <button class="cancel-btn">Cancelar</button>
-      <button class="save-btn">Guardar</button>
-    </section>
-    <section id="gestionar-asesorias" class="hidden">
-      <h2>Materias</h2>
-      <div class="subject-list">
-        <table id="subject-table">
-          <tr>
-            <th>Nombre</th>
-            <th>Grupo</th>
-            <th>Cupo</th>
-            <th>Descripción</th>
-            <th>Aula</th>
-            <th>Tema</th>
-            <th>Horario</th>
-            <th>Acciones</th>
-          </tr>
-        </table>
-      </div>
-      <button class="action-btn" id="add-subject-btn">Añadir Materia</button>
-      <button class="cancel-btn">Cancelar</button>
-      <button class="save-btn">Guardar</button>
-    </section>
-  </main>
-
-  <!-- Modal para añadir usuario -->
-  <div id="user-modal" class="modal hidden">
-    <div class="modal-content">
-      <h3>Añadir Usuario</h3>
-      <form id="user-form">
-        <label for="user-boleta">Boleta:</label>
-        <input type="text" id="user-boleta" name="boleta" required>
-
-        <label for="user-password">Contraseña:</label>
-        <input type="password" id="user-password" name="password" required>
-
-        <label for="user-nombre">Nombre:</label>
-        <input type="text" id="user-nombre" name="nombre" required>
-
-        <label for="user-apellido">Apellido:</label>
-        <input type="text" id="user-apellido" name="apellido" required>
-
-        <label for="user-correo">Correo:</label>
-        <input type="email" id="user-correo" name="correo" required>
-
-        <label for="user-unidadAcademica">Unidad Académica:</label>
-        <input type="number" id="user-unidadAcademica" name="unidadAcademica" required>
-
-        <label for="user-grupo">Grupo:</label>
-        <input type="number" id="user-grupo" name="grupo" required>
-
-        <button type="submit">Guardar</button>
-        <button type="button" class="modal-cancel-btn">Cancelar</button>
-      </form>
-    </div>
-  </div>
-
-  <!-- Modal para añadir materia -->
-  <div id="subject-modal" class="modal hidden">
-    <div class="modal-content">
-      <h2>Añadir Materia</h2>
-      <form id="subject-form">
-        <label for="subject-name">Nombre:</label>
-        <input type="text" id="subject-name" name="subject-name">
-
-        <label for="subject-group">Grupo:</label>
-        <input type="text" id="subject-group" name="subject-group">
-
-        <label for="subject-cupo">Cupo:</label>
-        <input type="text" id="subject-cupo" name="subject-cupo">
-
-        <label for="subject-description">Descripción:</label>
-        <input type="text" id="subject-description" name="subject-description">
-
-        <label for="subject-aula">Aula:</label>
-        <input type="text" id="subject-aula" name="subject-aula">
-
-        <label for="subject-tema">Tema:</label>
-        <input type="text" id="subject-tema" name="subject-tema">
-
-        <label for="subject-horario">Horario:</label>
-        <input type="text" id="subject-horario" name="subject-horario">
-
-        <div class="modal-buttons">
-          <button type="button" class="modal-cancel-btn">Cancelar</button>
-          <button type="submit" class="modal-save-btn">Guardar</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ProMentor Admin</title>
+    <link rel="stylesheet" href="/frontend/css/stylesadmin.css" />
+  </head>
+  <body>
+    <!---HADER INIT -->
+    <header>
+      <div class="header-left">
+        <img
+          src="/frontend/img/persona.PNG"
+          alt="Admin Profile Picture"
+          class="profile-img"
+        />
+        <div class="admin-info">
+          <p>Camargo Flores Víctor Alonso</p>
+          <p>Admin</p>
         </div>
-      </form>
+      </div>
+      <div class="header-center">
+        <img src="/frontend/img/logo.png" alt="ProMentor Logo" class="logo" />
+      </div>
+      <div class="header-right">
+        <button class="icon-button-menu">
+          <img src="/frontend/img/menu.png" alt="Menu" />
+        </button>
+      </div>
+    </header>
+    <!---HADER END -->
+
+    <main>
+      <section class="welcome-section">
+        <div style="text-align: center">
+          <h1>Bienvenido a ProMentor</h1>
+        </div>
+        <div style="text-align: center">
+          <img src="/frontend/img/logo.png" alt="Logo" class="logo-enmedio" />
+        </div>
+      </section>
+      <div style="text-align: center">
+        <section class="logo-con-botones">
+          <p>Selecciona la opción a realizar</p>
+        </section>
+      </div>
+      <div class="buttons">
+        <button id="gestionar-usuarios-btn">Gestionar Usuarios</button>
+        <button id="gestionar-asesoria-btn">Gestionar Asesorías</button>
+      </div>
+
+      <section id="gestionar-usuarios" class="hidden">
+        <h2>Alumnos inscritos</h2>
+        <div class="user-list">
+          <table id="user-table">
+            <tr>
+              <th>Boleta</th>
+              <th>Nombre</th>
+              <th>Apellido</th>
+              <th>Correo</th>
+              <th>Unidad Académica</th>
+              <th>Grupo</th>
+              <th>Acciones</th>
+            </tr>
+          </table>
+        </div>
+
+        <button class="action-btn" id="add-user-btn">Añadir Usuario</button>
+        <button class="cancel-btn">Cancelar</button>
+        <button class="save-btn">Guardar</button>
+      </section>
+
+      <section id="gestionar-asesorias" class="hidden">
+        <h2>Materias</h2>
+        <div class="subject-list">
+          <table id="subject-table">
+            <tr>
+              <th>Nombre</th>
+              <th>Grupo</th>
+              <th>Cupo</th>
+              <th>Descripción</th>
+              <th>Aula</th>
+              <th>Tema</th>
+              <th>Horario</th>
+              <th>Acciones</th>
+            </tr>
+          </table>
+        </div>
+        <button class="action-btn" id="add-subject-btn">Añadir Materia</button>
+        <button class="cancel-btn">Cancelar</button>
+        <button class="save-btn">Guardar</button>
+      </section>
+    </main>
+
+    <!-- Modal para añadir usuario -->
+    <div id="user-modal" class="modal hidden">
+      <div class="modal-content">
+        <h3>Añadir Usuario</h3>
+        <form id="user-form">
+          <label for="user-boleta">Boleta:</label>
+          <input type="text" id="user-boleta" name="boleta" required />
+
+          <label for="user-password">Contraseña:</label>
+          <input type="password" id="user-password" name="password" required />
+
+          <label for="user-nombre">Nombre:</label>
+          <input type="text" id="user-nombre" name="nombre" required />
+
+          <label for="user-apellido">Apellido:</label>
+          <input type="text" id="user-apellido" name="apellido" required />
+
+          <label for="user-correo">Correo:</label>
+          <input type="email" id="user-correo" name="correo" required />
+
+          <label for="user-unidadAcademica">Unidad Académica:</label>
+          <input
+            type="number"
+            id="user-unidadAcademica"
+            name="unidadAcademica"
+            required
+          />
+
+          <label for="user-grupo">Grupo:</label>
+          <input type="number" id="user-grupo" name="grupo" required />
+
+          <button type="submit">Guardar</button>
+          <button type="button" class="modal-cancel-btn">Cancelar</button>
+        </form>
+      </div>
     </div>
-  </div>
 
-<!-- Barra lateral -->
-<div id="sidebar" class="sidebar hidden">
-  <button id="close-sidebar-btn">Cerrar</button>
-  <button id="logout-btn">Cerrar sesión</button>
-</div>
+    <!-- Modal para añadir materia -->
+    <div id="subject-modal" class="modal hidden">
+      <div class="modal-content">
+        <h2>Añadir Materia</h2>
+        <form id="subject-form">
+          <label for="subject-name">Nombre:</label>
+          <input type="text" id="subject-name" name="subject-name" />
 
-<script src="/frontend/js/admin.js"></script>
-</body>
+          <label for="subject-group">Grupo:</label>
+          <input type="text" id="subject-group" name="subject-group" />
+
+          <label for="subject-cupo">Cupo:</label>
+          <input type="text" id="subject-cupo" name="subject-cupo" />
+
+          <label for="subject-description">Descripción:</label>
+          <input
+            type="text"
+            id="subject-description"
+            name="subject-description"
+          />
+
+          <label for="subject-aula">Aula:</label>
+          <input type="text" id="subject-aula" name="subject-aula" />
+
+          <label for="subject-tema">Tema:</label>
+          <input type="text" id="subject-tema" name="subject-tema" />
+
+          <label for="subject-horario">Horario:</label>
+          <input type="text" id="subject-horario" name="subject-horario" />
+
+          <div class="modal-buttons">
+            <button type="button" class="modal-cancel-btn">Cancelar</button>
+            <button type="submit" class="modal-save-btn">Guardar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Barra lateral -->
+    <div id="sidebar" class="sidebar hidden">
+      <button id="close-sidebar-btn">Cerrar</button>
+      <button id="logout-btn">Cerrar sesión</button>
+    </div>
+
+    <script src="/frontend/js/admin.js"></script>
+  </body>
 </html>

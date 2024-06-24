@@ -7,7 +7,9 @@ import usuarioRoutes from "./routes/usuario.routes.js";
 import materiaRoutes from "./routes/materia.routes.js";
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: "*",
+}));
 
 app.use(morgan("dev"));
 app.use(express.urlencoded({ extended: false }));
@@ -15,5 +17,5 @@ app.use(express.json());
 
 // Routes
 app.use("/api", usuarioRoutes);
-app.use("/api",materiaRoutes);
+app.use("/api", materiaRoutes);
 export default app;
