@@ -1,0 +1,100 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos de la cabecera */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e5e5e5;
+    padding: 10px 20px;
+}
+
+.header-left, .header-center, .header-right {
+    display: flex;
+    align-items: center;
+}
+
+.profile-img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.admin-info {
+    line-height: 1.2;
+}
+
+.logo {
+    width: 100px;
+}
+
+.icon-button {
+    background: none;
+    border: none;
+    margin-left: 10px;
+}
+
+/* Estilos de la sección principal */
+main {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #9b1d20;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #7f171a;
+}
+
+.action-btn, .cancel-btn, .save-btn {
+    margin-top: 20px;
+}
+
+.action-btn {
+    background-color: #4CAF50;
+}
+
+.cancel-btn {
+    background-color: #f44336;
+}
+
+.save-btn {
+    background-color: #2196F3;
+}
+
+.action-btn:hover, .cancel-btn:hover, .save-btn:hover {
+    opacity: 0.8;
+}

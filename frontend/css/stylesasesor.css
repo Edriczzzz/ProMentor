@@ -1,0 +1,176 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url('Fondo.png') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: #B2B2B2;
+    color: black;
+    padding: 10px 10px;
+    box-sizing: border-box;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 70px;
+    height: 70px;
+}
+
+.notifications {
+    display: flex;
+    align-items: center;
+}
+
+.notification-icon {
+    width: 30px;
+    height: 30px;
+}
+
+.content {
+    width: 100%;
+    max-width: 1200px; /* Ajusta el ancho máximo para el contenido */
+    margin: 20px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #8B0046;
+    text-align: center;
+}
+
+.main-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-section {
+    width: 50%; /* Ajusta el ancho de la sección izquierda */
+    margin-right: 20px;
+}
+
+.right-section {
+    width: 45%; /* Ajusta el ancho de la sección derecha */
+}
+
+.assistance-card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #8B0046;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.description, .details, .students-info {
+    margin-bottom: 20px;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border: 1px solid #8B0046;
+    border-radius: 5px;
+    resize: none;
+}
+
+input[type="text"], input[type="number"], input[type="time"], select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #8B0046;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.schedule {
+    border: 1px solid #8B0046;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.schedule-list {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.schedule-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.schedule-item label {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.schedule-item select, .schedule-item input {
+    flex: 2;
+}
+
+.enroll, .grade {
+    background-color: #8B0046;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.students-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.students-registered {
+    border: 1px solid #8B0046;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #8B0046;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #8B0046;
+    color: white;
+}
+
+td {
+    background-color: #f2f2f2;
+}

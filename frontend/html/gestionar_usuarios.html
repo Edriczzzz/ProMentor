@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestionar Usuarios - ProMentor Admin</title>
+    <link rel="stylesheet" href="/frontend/css/stylesgest_usu.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-left">
+        <img
+          src="/frontend/img/persona.PNG"
+          alt="Admin Profile Picture"
+          class="profile-img"
+        />
+        <div class="admin-info">
+          <p>Camargo Flores Víctor Alonso</p>
+          <p>Admin</p>
+        </div>
+      </div>
+      <div class="header-center">
+        <img src="/frontend/img/logo.png" alt="ProMentor Logo" class="logo" />
+      </div>
+      <div class="header-right">
+        <button class="icon-button">
+          <img src="/frontend/img/noti.png" alt="Notifications" />
+        </button>
+        <button class="icon-button">
+          <img src="/frontend/img/menu.png" alt="Menu" />
+        </button>
+      </div>
+    </header>
+    <main>
+      <h2>Alumnos inscritos</h2>
+      <div class="user-list">
+        <table id="user-table">
+          <tr>
+            <th>Boleta</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Correo</th>
+            <th>Unidad Académica</th>
+            <th>Grupo</th>
+            <th>Acciones</th>
+          </tr>
+          <tr>
+            <td>202110001</td>
+            <td>María</td>
+            <td>López Torres</td>
+            <td>maria.lopez@example.com</td>
+            <td>1</td>
+            <td>1</td>
+            <td>
+              <button class="edit-btn">
+                <img src="/frontend/img/edit.png" alt="Editar" /></button
+              ><button class="delete-btn">
+                <img src="/frontend/img/eliminar.png" alt="Eliminar" />
+              </button>
+            </td>
+          </tr>
+          <!-- Más filas según sea necesario -->
+        </table>
+      </div>
+      <button class="action-btn" id="add-user-btn">Añadir Usuario</button>
+      <button class="cancel-btn" onclick="window.location.href='admin.html'">
+        Cancelar
+      </button>
+      <button class="save-btn">Guardar</button>
+
+      <!-- Modal para añadir usuario -->
+      <div id="user-modal" class="modal hidden">
+        <div class="modal-content">
+          <h3>Añadir Usuario</h3>
+          <form id="user-form">
+            <label for="user-boleta">Boleta:</label>
+            <input type="text" id="user-boleta" name="boleta" required />
+
+            <label for="user-password">Contraseña:</label>
+            <input
+              type="password"
+              id="user-password"
+              name="password"
+              required
+            />
+
+            <label for="user-nombre">Nombre:</label>
+            <input type="text" id="user-nombre" name="nombre" required />
+
+            <label for="user-apellido">Apellido:</label>
+            <input type="text" id="user-apellido" name="apellido" required />
+
+            <label for="user-correo">Correo:</label>
+            <input type="email" id="user-correo" name="correo" required />
+
+            <label for="user-unidadAcademica">Unidad Académica:</label>
+            <input
+              type="number"
+              id="user-unidadAcademica"
+              name="unidadAcademica"
+              required
+            />
+
+            <label for="user-grupo">Grupo:</label>
+            <input type="number" id="user-grupo" name="grupo" required />
+
+            <button type="submit">Guardar</button>
+            <button type="button" class="modal-cancel-btn">Cancelar</button>
+          </form>
+        </div>
+      </div>
+    </main>
+    <script src="/frontend/js/admin.js"></script>
+  </body>
+</html>

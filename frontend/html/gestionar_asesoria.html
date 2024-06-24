@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestionar Asesorías - ProMentor Admin</title>
+    <link rel="stylesheet" href="/frontend/css/stylesgest_ase.css">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <img src="/frontend/img/persona.PNG" alt="Admin Profile Picture" class="profile-img">
+            <div class="admin-info">
+                <p>Camargo Flores Víctor Alonso</p>
+                <p>Admin</p>
+            </div>
+        </div>
+        <div class="header-center">
+            <img src="/frontend/img/logo.png" alt="ProMentor Logo" class="logo">
+        </div>
+        <div class="header-right">
+            <button class="icon-button">
+                <img src="/frontend/img/noti.png" alt="Notifications">
+            </button>
+            <button class="icon-button">
+                <img src="/frontend/img/menu.png" alt="Menu">
+            </button>
+        </div>
+    </header>
+    <main>
+        <h2>Materias</h2>
+        <div class="subject-list">
+            <table>
+                <tr>
+                    <th>Materia</th>
+                    <th>Editar</th>
+                    <th>Eliminar</th>
+                </tr>
+                <tr>
+                    <td>Matemáticas</td>
+                    <td><button class="edit-btn"><img src="/frontend/img/edit.png" alt="Editar"></button></td>
+                    <td><button class="delete-btn"><img src="/frontend/img/eliminar.png" alt="Eliminar"></button></td>
+                </tr>
+                <tr>
+                    <td>Historia</td>
+                    <td><button class="edit-btn"><img src="/frontend/img/edit.png" alt="Editar"></button></td>
+                    <td><button class="delete-btn"><img src="/frontend/img/eliminar.png" alt="Eliminar"></button></td>
+                </tr>
+                <!-- Más filas según sea necesario -->
+            </table>
+        </div>
+        <button class="action-btn" id="add-subject-btn">Añadir Materia</button>
+        <button class="cancel-btn" onclick="window.location.href='admin.html'">Cancelar</button>
+        <button class="save-btn">Guardar</button>
+    </main>
+    <script src="/frontend/js/admin.js"></script>
+</body>
+</html>

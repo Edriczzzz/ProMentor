@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProMentor - Asesor</title>
+    <link rel="stylesheet" href="/frontend/css/stylesasesor.css">
+    <script src="/frontend/js/scriptasesor.js" defer></script>
+</head>
+<body>
+    <div class="top-bar">
+        <div class="user-info">
+            <span id="advisor-name">Nombre del Asesor</span>
+            <span id="advisor-id">2023640198</span>
+        </div>
+        <div class="logo-container">
+            <img src="/frontend/img/logo.png" alt="ProMentor Logo" class="logo">
+        </div>
+        <div class="notifications">
+            <img src="/frontend/img/noti.png" alt="Notificaciones" class="notification-icon">
+        </div>
+    </div>
+    <div class="content">
+        <div class="main-container">
+            <div class="left-section">
+                <h1>Cálculo Integral</h1>
+                <div class="assistance-card">
+                    <div class="description">
+                        <h2>Descripción:</h2>
+                        <textarea id="description-text" placeholder="Descripción de la asesoría"></textarea>
+                    </div>
+                    <div class="details">
+                        <div class="topics">
+                            <h2>Temas:</h2>
+                            <textarea id="topics-text" placeholder="Temas a tratar"></textarea>
+                        </div>
+                        <div class="material">
+                            <h2>Material:</h2>
+                            <textarea id="material-text" placeholder="Material necesario"></textarea>
+                        </div>
+                        <div class="zoom-info">
+                            <h2>Zoom ID:</h2>
+                            <input type="text" id="zoom-id" placeholder="573 254 678">
+                            <h2>Contraseña:</h2>
+                            <input type="text" id="zoom-password" placeholder="884 729">
+                        </div>
+                    </div>
+                    <div class="students-info">
+                        <h2>Cupo máximo de alumnos:</h2>
+                        <input type="number" id="max-students" value="30">
+                        <h2>Cupo disponible:</h2>
+                        <input type="number" id="available-students" value="27">
+                        <p><img src="/frontend/img/persona.PNG" alt="Alumnos" class="students-icon"> 3/30</p>
+                    </div>
+                </div>
+            </div>
+            <div class="right-section">
+                <div class="schedule">
+                    <h2>Horarios completos:</h2>
+                    <div class="schedule-list">
+                        <div class="schedule-item">
+                            <label for="day">Día:</label>
+                            <select id="day">
+                                <option value="Lunes">Lunes</option>
+                                <option value="Martes">Martes</option>
+                                <option value="Miércoles">Miércoles</option>
+                                <option value="Jueves">Jueves</option>
+                                <option value="Viernes">Viernes</option>
+                                <option value="Sábado">Sábado</option>
+                                <option value="Domingo">Domingo</option>
+                            </select>
+                        </div>
+                        <div class="schedule-item">
+                            <label for="start-time">Hora de inicio:</label>
+                            <input type="time" id="start-time">
+                        </div>
+                        <div class="schedule-item">
+                            <label for="end-time">Hora de fin:</label>
+                            <input type="time" id="end-time">
+                        </div>
+                    </div>
+                    <button class="enroll">Inscribir</button>
+                    <button class="grade">Calificar</button>
+                </div>
+                <div class="students-registered">
+                    <h2>Alumnos inscritos</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Alumno</th>
+                                <th>Horario</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>María López Torres</td>
+                                <td>Lunes 17:00-18:20</td>
+                            </tr>
+                            <tr>
+                                <td>Luis Casas Hernández</td>
+                                <td>Miércoles 15:00-16:00</td>
+                            </tr>
+                            <tr>
+                                <td>Fernando Aguilar Martinez</td>
+                                <td>Viernes 13:00-15:00</td>
+                            </tr>
+                            <tr>
+                                <td>Julio Andrés Gonzalez</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Luis Casas Hernández</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Carlos Albertos Jimenéz</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>José Perez Avarez</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Anuel Rodriguez Guerrero</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Andrea Rosas Angeles</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

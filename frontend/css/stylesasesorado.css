@@ -1,0 +1,154 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url('Fondo.png') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+}
+
+.notifications {
+    display: flex;
+    align-items: center;
+}
+
+.notification-icon {
+    width: 30px;
+    height: 30px;
+}
+
+.content {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #8B0046;
+    text-align: center;
+}
+
+.assistance-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.assistance-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #8B0046;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.assistance-info {
+    display: flex;
+    align-items: center;
+}
+
+.profile-pic {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+}
+
+.assistance-info h2 {
+    margin: 0;
+    color: #8B0046;
+}
+
+.assistance-info p {
+    margin: 5px 0;
+}
+
+.assistance-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.view-more, .enroll {
+    background-color: #8B0046;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.students-icon {
+    width: 20px;
+    height: 20px;
+}
+
+/* Estilos para el modal */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed; /* Posicionarlo de manera fija */
+    z-index: 1; /* Por encima de otros elementos */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ancho total */
+    height: 100%; /* Altura total */
+    overflow: auto; /* Desplazamiento si es necesario */
+    background-color: rgb(0,0,0); /* Color de fondo negro */
+    background-color: rgba(0,0,0,0.4); /* Con opacidad */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% desde arriba y centrado */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Puede ajustarse según sea necesario */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

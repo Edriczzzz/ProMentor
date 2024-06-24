@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProMentor - Inicio de Sesión</title>
+    <link rel="stylesheet" href="/frontend/css/styles.css">
+    <script src="/frontend/js/script.js" defer></script>
+</head>
+<body>
+    <div class="top-bar">
+        <span>Iniciar Sesión</span>
+    </div>
+    <div class="login-container">
+        <div class="login-box">
+            <div class="logo">
+                <img src="/frontend/img/logo.png" alt="ProMentor Logo">
+            </div>
+            <h1>ProMentor</h1>
+            <form id="loginForm">
+                <div class="input-group">
+                    <label for="username">Usuario</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Contraseña</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="captcha">
+                    <input type="checkbox" id="not-robot" name="not-robot" required>
+                    <label for="not-robot">I'm not a robot</label>
+                </div>
+                <div class="buttons">
+                    <button type="submit">Iniciar Sesión</button>
+                    <button type="button" onclick="cancelLogin()">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProMentor - Asesorado</title>
+    <link rel="stylesheet" href="/frontend/css/stylesasesorado.css">
+    <script src="/frontend/js/asesorado1.js" defer></script>
+</head>
+<body>
+    <div class="top-bar">
+        <div class="user-info">
+            <span id="student-name">Nombre del Asesorado</span>
+            <span id="student-id">2023640198</span>
+        </div>
+        <div class="logo-container">
+            <img src="/frontend/img/logo.png" alt="ProMentor Logo" class="logo">
+        </div>
+        <div class="notifications">
+            <img src="/frontend/img/noti.png" alt="Notificaciones" class="notification-icon">
+        </div>
+    </div>
+    <div class="content">
+        <h1>Asesorías</h1>
+        <div class="assistance-container">
+            <div class="assistance-card">
+                <div class="assistance-info">
+                    <img src="/frontend/img/persona.PNG" alt="Asesor" class="profile-pic">
+                    <div>
+                        <h2>Dibujo</h2>
+                        <p>Lopez Olvera Rafael</p>
+                        <p>Se verán temas de arte</p>
+                        <p><strong>L</strong> 17:00 - 18:20<br>
+                        <strong>MI</strong> 15:00 - 16:00<br>
+                        <strong>J</strong> 16:00 - 18:20</p>
+                    </div>
+                </div>
+                <div class="assistance-actions">
+                    <button class="view-more" data-materia="Dibujo" data-asesor="Lopez Olvera Rafael" data-descripcion="Se verán temas de arte" data-temas="Temas de arte" data-material="Ninguno" data-cupo="15" data-max="15" data-horarios="Lunes 17:00 - 18:20, Miércoles 15:00 - 16:00, Jueves 16:00 - 18:20">Ver más</button>
+                    <button class="enroll">Inscribir</button>
+                    <p><img src="/frontend/img/persona.PNG" alt="Alumnos" class="students-icon"> 0/15</p>
+                </div>
+            </div>
+            <div class="assistance-card">
+                <div class="assistance-info">
+                    <img src="/frontend/img/persona.PNG" alt="Asesor" class="profile-pic">
+                    <div>
+                        <h2>Introducción a POO</h2>
+                        <p>Hernandez Garcia Beto Kaarl</p>
+                        <p>Ayuda en los temas de POO (Java)</p>
+                        <p><strong>J</strong> 16:00 - 18:20</p>
+                    </div>
+                </div>
+                <div class="assistance-actions">
+                    <button class="view-more" data-materia="Introducción a POO" data-asesor="Hernandez Garcia Beto Kaarl" data-descripcion="Ayuda en los temas de POO (Java)" data-temas="POO (Java)" data-material="Ninguno" data-cupo="1" data-max="1" data-horarios="Jueves 16:00 - 18:20">Ver más</button>
+                    <button class="enroll">Inscribir</button>
+                    <p><img src="/frontend/img/persona.PNG" alt="Alumnos" class="students-icon"> 0/1</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="ver-mas-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modal-materia"></h2>
+            <p><strong>Asesor:</strong> <span id="modal-asesor"></span></p>
+            <p><strong>Descripción:</strong> <span id="modal-descripcion"></span></p>
+            <p><strong>Temas:</strong> <span id="modal-temas"></span></p>
+            <p><strong>Material:</strong> <span id="modal-material"></span></p>
+            <p><strong>Cupo disponible:</strong> <span id="modal-cupo"></span></p>
+            <p><strong>Cupo máximo:</strong> <span id="modal-max"></span></p>
+            <p><strong>Horarios:</strong> <span id="modal-horarios"></span></p>
+            <button id="modal-inscribir">Inscribir</button>
+        </div>
+    </div>
+</body>
+</html>

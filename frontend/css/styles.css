@@ -1,0 +1,154 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url('Fondo.png') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.top-bar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: left;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.top-bar span {
+    margin-right: 15px;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.login-box {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+}
+
+h1 {
+    margin: 20px 0;
+    color: #8B0046;
+}
+
+.input-group {
+    margin: 15px 0;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.forgot-password {
+    text-align: left;
+}
+
+.forgot-password a {
+    color: #8B0046;
+    text-decoration: none;
+}
+
+.captcha {
+    margin: 20px 0;
+    text-align: left;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #8B0046;
+    color: white;
+}
+
+.buttons button[type="button"] {
+    background-color: #ccc;
+    color: #333;
+}
+
+.profile-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+}
+
+.profile-container img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.profile-info {
+    display: flex;
+    align-items: center;
+}
+
+.profile-info span {
+    margin-right: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    border: 1px solid #9b1d20;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.edit-btn, .delete-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.edit-btn img, .delete-btn img {
+    width: 20px;
+    height: 20px;
+}
